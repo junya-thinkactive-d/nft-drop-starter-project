@@ -40,12 +40,14 @@
   margin: 0;
   font-size: 80px;
   font-weight: bold;
+  user-select:none;
 }
 
 .sub-text {
   font-size: 25px;
   color: #da8e00;
   text-shadow: 1px 0 5px black;
+  user-select:none;
 }
 
 .gradient-text {
@@ -65,6 +67,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  user-select:none;
 }
 
 .connect-wallet-button {
@@ -82,14 +85,27 @@
   box-shadow:0 0 10px #FF9900;
 }
 
+.unpublished-button {
+  font-size:40px;
+  padding:10px;
+  border-radius: 0;
+  margin:0 auto;
+  width:30%;
+  color:#ffffff;
+  background: #000000;
+  background-size: 200% 200%;
+  user-select:none;
+}
+
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 40px;
   left: 0;
+  user-select:none;
   /* padding-bottom: 45px; */
 }
 

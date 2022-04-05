@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import './CountdownTimer.css'
 
 const CountdownTimer = ({ dropDate }) => {
   const [timerString, setTimerString] = useState('')
+  const [dayTimerString, setDayTimerString] = useState('')
+  const [hourTimerString, setHourTimerString] = useState('')
+  const [minuteTimerString, setMinuteTimerString] = useState('')
+  const [secondTimerString, setSecondTimerString] = useState('')
   useEffect(() => {
     console.log('Setting interval...')
 
@@ -17,6 +22,10 @@ const CountdownTimer = ({ dropDate }) => {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
       setTimerString(`${days}d ${hours}h ${minutes}m ${seconds}s`)
+      setDayTimerString(days)
+      setHourTimerString(hours)
+      setMinuteTimerString(minutes)
+      setSecondTimerString(seconds)
 
       if (distance < 0) {
         console.log('Clearing interval')
@@ -33,7 +42,18 @@ const CountdownTimer = ({ dropDate }) => {
   return (
     <div className='timer-container'>
       <p className='timer-header'>Sword Drop Starting In</p>
-      {timerString && <p className='timer-value'>{`⏰ ${timerString}`}</p>}
+      {timerString && (
+        <div className='timer-body'>
+          <div className='timer day'>{dayTimerString}</div>
+          <div className='teimr-words'>day</div>
+          <div className='timer hour'>{hourTimerString}</div>
+          <div className='teimr-words'>:</div>
+          <div className='timer minute'>{minuteTimerString}</div>
+          <div className='teimr-words'>:</div>
+          <div className='timer second'>{secondTimerString}</div>
+        </div>
+      )}
+      <div>Comming Soon !</div>
     </div>
   )
 }

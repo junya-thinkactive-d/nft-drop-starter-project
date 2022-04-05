@@ -401,6 +401,26 @@ const CandyMachine = ({ walletAddress }) => {
 
     return <p>{`Drop Date: ${candyMachine.state.goLiveDataTimeString}`}</p>
   }
+  const arrowDropButton = () => {
+    const currentDate = new Date()
+    const dropDate = new Date(candyMachine.state.goLiveData * 1000)
+
+    if (currentDate < dropDate) {
+      console.log("Can't arrow Mint!")
+
+      return (
+        <div className='unpublished-button'>
+          Current unpublished !
+        </div>
+      )
+    }
+
+    return (
+      <button className='cta-button mint-button' onClick={mintToken}>
+        Mint NFT
+      </button>
+    )
+  }
 
   return (
     candyMachine &&
@@ -410,12 +430,8 @@ const CandyMachine = ({ walletAddress }) => {
         <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
         {candyMachine.state.itemsRedeemed ===
         candyMachine.state.itemsAvailable ? (
-          <p className='sub-text'>Sold Out 🙊</p>
-        ) : (
-          <button className='cta-button mint-button' onClick={mintToken}>
-            Mint NFT
-          </button>
-        )}
+          <p className='sub-text'>⚔ Sold Out ⚔</p>
+        ) : arrowDropButton()}
       </div>
     )
   )
