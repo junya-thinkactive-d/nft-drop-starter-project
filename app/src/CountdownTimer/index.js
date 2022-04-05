@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './CountdownTimer.css'
 
-const CountdownTimer = ({ dropDate }) => {
+const CountdownTimer = ({ dropDate,setDistance }) => {
   const [timerString, setTimerString] = useState('')
   const [dayTimerString, setDayTimerString] = useState('')
   const [hourTimerString, setHourTimerString] = useState('')
@@ -13,6 +13,7 @@ const CountdownTimer = ({ dropDate }) => {
     const interval = setInterval(() => {
       const currentDate = new Date().getTime()
       const distance = dropDate - currentDate
+      setDistance(distance)
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24))
       const hours = Math.floor(

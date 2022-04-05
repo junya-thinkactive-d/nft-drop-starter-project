@@ -22,6 +22,7 @@ const opts = {
 
 const CandyMachine = ({ walletAddress }) => {
   const [candyMachine, setCandyMachine] = useState(null)
+  const [distance, setDistance] = useState(null)
   const getCandyMachineCreator = async (candyMachine) => {
     const candyMachineID = new PublicKey(candyMachine)
     return await web3.PublicKey.findProgramAddress(
@@ -394,19 +395,16 @@ const CandyMachine = ({ walletAddress }) => {
     const dropDate = new Date(candyMachine.state.goLiveData * 1000)
 
     if (currentDate < dropDate) {
-      console.log('befor drop date')
 
-      return <CountdownTimer dropDate={dropDate} />
+      return <CountdownTimer dropDate={dropDate} setDistance={setDistance}/>
     }
 
     return <p>{`Drop Date: ${candyMachine.state.goLiveDataTimeString}`}</p>
   }
-  const arrowDropButton = () => {
-    const currentDate = new Date()
-    const dropDate = new Date(candyMachine.state.goLiveData * 1000)
 
-    if (currentDate < dropDate) {
-      console.log("Can't arrow Mint!")
+  const arrowDropButton = () => {
+
+    if (distance >= 0) {
 
       return (
         <div className='unpublished-button'>
