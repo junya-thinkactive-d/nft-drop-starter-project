@@ -1,0 +1,19 @@
+{
+  "name": "HAJIMARINO_TURUGI",
+  "symbol": "",
+  "image": "5.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "5.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DqeeUE4jycpeQbay756K2d8gcQfoGsNuJzBCfzLjegQp",
+        "share": 100
+      }
+    ]
+  }
+}

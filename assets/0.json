@@ -1,0 +1,19 @@
+{
+  "name": "YUUSHANO_KEN",
+  "symbol": "",
+  "image": "0.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DqeeUE4jycpeQbay756K2d8gcQfoGsNuJzBCfzLjegQp",
+        "share": 100
+      }
+    ]
+  }
+}

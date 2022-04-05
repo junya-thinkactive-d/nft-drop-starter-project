@@ -1,0 +1,19 @@
+{
+  "name": "ANKOKUMAKEN",
+  "symbol": "",
+  "image": "3.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "3.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DqeeUE4jycpeQbay756K2d8gcQfoGsNuJzBCfzLjegQp",
+        "share": 100
+      }
+    ]
+  }
+}

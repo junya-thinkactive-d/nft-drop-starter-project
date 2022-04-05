@@ -1,0 +1,19 @@
+{
+  "name": "Epe",
+  "symbol": "",
+  "image": "7.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "7.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DqeeUE4jycpeQbay756K2d8gcQfoGsNuJzBCfzLjegQp",
+        "share": 100
+      }
+    ]
+  }
+}

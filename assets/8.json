@@ -1,0 +1,19 @@
+{
+  "name": "NATTOUKEN",
+  "symbol": "",
+  "image": "8.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "8.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DqeeUE4jycpeQbay756K2d8gcQfoGsNuJzBCfzLjegQp",
+        "share": 100
+      }
+    ]
+  }
+}

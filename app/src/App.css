@@ -1,9 +1,10 @@
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
+  background-color: black;
   overflow: scroll;
   text-align: center;
   overflow: hidden;
+  object-fit:contain;
 }
 
 .container {
@@ -14,6 +15,9 @@
   padding: 0 30px 0 30px;
   color: white;
   position: relative;
+  background-image:url('img/bg-sword.jpg');
+  background-size:100%;
+  background-position:center;
   /* background-color: #35aee2; */
 }
 
@@ -29,13 +33,19 @@
 }
 
 .header {
+  color: #DA8E00;
+  background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
 }
 
 .sub-text {
   font-size: 25px;
+  color: #da8e00;
+  text-shadow: 1px 0 5px black;
 }
 
 .gradient-text {
@@ -58,17 +68,18 @@
 }
 
 .connect-wallet-button {
-  color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  color: black;
+  background: #FF9900;
   background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  margin:0 auto;
+  width:30%;
+  color:#ffffff;
+  background: black;
   background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
-  margin-left: 10px;
+  box-shadow:0 0 10px #FF9900;
 }
 
 .footer-container {
